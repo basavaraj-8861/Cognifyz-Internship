@@ -1,0 +1,354 @@
+$primary-color: #071a33;
+$secondary-color: #36d1dc;
+$accent-color: #168fa0;
+
+$white-color: #ffffff;
+$light-background: #f5f8fc;
+$dark-background: #181818;
+$dark-card: #222222;
+
+$text-color: #071a33;
+$muted-text: #536174;
+$light-text: #dddddd;
+
+$font-main: Arial, sans-serif;
+
+$section-padding: 90px 7%;
+
+$border-radius: 12px;
+
+$transition: 0.4s ease;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-main;
+    color: $text-color;
+    background: $white-color;
+
+    a {
+        text-decoration: none;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 40px;
+
+        p {
+            color: $accent-color;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            color: $text-color;
+            font-size: 36px;
+
+            span {
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+.hero {
+    padding: $section-padding;
+    background: $primary-color;
+    color: $white-color;
+
+    .hero-content {
+
+        .small-title {
+            color: $secondary-color;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 20px 0;
+
+            span {
+                color: $secondary-color;
+            }
+        }
+
+        .hero-text {
+            color: $light-text;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+    }
+
+    .hero-image {
+
+        img {
+            width: 100%;
+            border-radius: $border-radius;
+        }
+    }
+}
+
+.about {
+    padding: $section-padding;
+    background: $white-color;
+
+    .about-card {
+        border: none;
+        border-radius: $border-radius;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+        .highlight-text {
+            color: $accent-color;
+            font-weight: bold;
+        }
+    }
+}
+
+.services {
+    padding: $section-padding;
+    background: $light-background;
+
+    .service-card {
+        border: none;
+        border-radius: $border-radius;
+        transition: transform $transition,
+                    box-shadow $transition;
+
+        &:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            color: $accent-color;
+        }
+
+        .card-text {
+            color: $muted-text;
+            line-height: 1.6;
+        }
+    }
+}
+
+.api-section {
+    padding: $section-padding;
+    background: $white-color;
+    text-align: center;
+
+    .api-description {
+        max-width: 700px;
+        margin: 0 auto 25px;
+        color: $muted-text;
+        line-height: 1.7;
+    }
+
+    .api-button {
+        background: $secondary-color;
+        border-color: $secondary-color;
+        color: $primary-color;
+        font-weight: bold;
+    }
+
+    .posts-container {
+        max-width: 1000px;
+        margin: 40px auto 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+
+        .post-card {
+            background: $light-background;
+            padding: 25px;
+            border-radius: $border-radius;
+            text-align: left;
+
+            h3 {
+                color: $accent-color;
+                font-size: 18px;
+            }
+
+            p {
+                color: $muted-text;
+                line-height: 1.6;
+            }
+        }
+    }
+}
+
+.contact-section {
+    padding: $section-padding;
+    background: $light-background;
+    text-align: center;
+
+    .contact-description {
+        max-width: 700px;
+        margin: 0 auto 35px;
+        color: $muted-text;
+    }
+
+    .contact-form {
+        max-width: 650px;
+        margin: auto;
+        padding: 35px;
+        background: $white-color;
+        border-radius: $border-radius;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        text-align: left;
+
+        .form-group {
+            margin-bottom: 22px;
+
+            label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: 600;
+            }
+
+            small {
+                display: block;
+                margin-top: 6px;
+                color: #d93025;
+            }
+        }
+
+        .form-button {
+            width: 100%;
+            font-weight: bold;
+        }
+
+        #successMessage {
+            text-align: center;
+            margin-top: 18px;
+            color: #168f64;
+            font-weight: 600;
+        }
+    }
+}
+body.dark-mode {
+
+    background: $dark-background;
+    color: $white-color;
+
+    .section-title {
+
+        h2 {
+            color: $white-color;
+        }
+    }
+
+    .about {
+        background: $dark-background;
+
+        .about-card {
+            background: $dark-card;
+            color: $white-color;
+        }
+    }
+
+    .services {
+        background: $dark-background;
+
+        .service-card {
+            background: $dark-card;
+            color: $white-color;
+
+            .card-text {
+                color: $light-text;
+            }
+        }
+    }
+
+    .api-section {
+        background: $dark-background;
+
+        .api-description {
+            color: $light-text;
+        }
+
+        .post-card {
+            background: $dark-card;
+
+            p {
+                color: $light-text;
+            }
+        }
+    }
+
+    .contact-section {
+        background: $dark-background;
+
+        .contact-form {
+            background: $dark-card;
+
+            label {
+                color: $white-color;
+            }
+
+            .form-control {
+                background: #2d2d2d;
+                color: $white-color;
+                border-color: #555555;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+
+    .hero {
+
+        .hero-content {
+
+            h1 {
+                font-size: 38px;
+            }
+        }
+    }
+
+    .api-section {
+
+        .posts-container {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 60px 5%;
+
+        .hero-content {
+            text-align: center;
+
+            h1 {
+                font-size: 32px;
+            }
+        }
+    }
+
+    .about,
+    .services,
+    .api-section,
+    .contact-section {
+        padding: 60px 5%;
+    }
+
+    .contact-section {
+
+        .contact-form {
+            padding: 25px;
+        }
+    }
+}
